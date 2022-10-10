@@ -13,12 +13,10 @@ def englishToFrench():
 @views.route("/frenchToEnglish")
 def frenchToEnglish():
     textToTranslate = request.args.get('textToTranslate')
-    # Write your code here
+    
     return machinetranslation.frenchToEnglish(textToTranslate)
 
 @views.route("/")
 def renderIndexPage():
 
     return render_template('index.html')
-
-# Write the code to render template
