@@ -24,12 +24,13 @@ def frenchToEnglish(frenchText):
     text=frenchText,
     model_id='fr-en').get_result()
     
-    return json.dumps(translation, indent=2, ensure_ascii=False)
+    return translation["translations"][0]["translation"]
 
 def englishTofrench(englishText):
     
     translation = language_translator.translate(
     text=englishText,
     model_id='en-fr').get_result()
+
     
-    return translation
+    return translation["translations"][0]["translation"]

@@ -1,1 +1,1 @@
-from . import translator
+from .translator import frenchToEnglish, englishTofrench
